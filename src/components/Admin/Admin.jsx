@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { AuthContext } from "../../context/AuthContext"
-import { Navigate } from "react-router-dom"
+import { Link, Navigate } from "react-router-dom"
 
 export const Admin = () => {
     const { user } = useContext(AuthContext)
@@ -10,6 +10,8 @@ export const Admin = () => {
     }
 
     return (
-        <p>Only admin can read this</p>
+        <div>
+            <Link to="/admin/gestionarTurnos">Gestionar Turnos</Link>
+        </div>
     )
 }
